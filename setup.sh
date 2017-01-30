@@ -2,7 +2,7 @@
 
 # Install basic packages
 echo "Installing packages"
-sudo apt install git vim terminator pylint3 openbox
+sudo apt install git vim tree terminator pylint3 openbox
 
 # Copy configuration files
 echo "Copying configuration files"
