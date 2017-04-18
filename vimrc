@@ -19,6 +19,10 @@ let g:syntastic_loc_list_height = 4
 let g:syntastic_python_checkers = ['pylint']
 "let g:syntastic_python_checkers = ['python']
 
+" NERDTree settings
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
 " NERD Commenter key bindings
 nmap <C-k> :call NERDComment('n', 'toggle')<CR>
 vmap <C-k> :call NERDComment('v', 'toggle')<CR>
