@@ -22,6 +22,7 @@ let g:syntastic_python_checkers = ['pylint']
 " NERDTree settings
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " NERD Commenter key bindings
 nmap <C-k> :call NERDComment('n', 'toggle')<CR>
