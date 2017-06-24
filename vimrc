@@ -11,7 +11,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_loc_list_height = 4
 
@@ -41,7 +41,7 @@ set softtabstop=2
 
 "autocommands
 autocmd BufNewFile,BufReadPost *.frag,*.vert set syntax=c
-autocmd BufWritePost,FileWritePost *.tex silent execute "!pdflatex %" | redraw!
+"autocmd BufWritePost,FileWritePost *.tex silent execute "!pdflatex %" | redraw!
 
 "abbreviations
 ab abfor for(int i=0; i<n; ++i) {
@@ -49,6 +49,7 @@ ab abfor for(int i=0; i<n; ++i) {
 "f key mappings
 map <F3> :set spell spelllang=en_gb<CR>
 map <F4> :set nospell<CR>
+imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 map <F5> :!python3 %<CR>
 map <F8> :!make micaz sim && python runsim.py<CR>
 map <F9> :!pdflatex % && evince %<.pdf<CR>
