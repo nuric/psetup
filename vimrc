@@ -18,6 +18,7 @@ let g:syntastic_loc_list_height = 4
 "let g:syntastic_python_pylint_exe = 'pylint3'
 let g:syntastic_python_checkers = ['pylint']
 "let g:syntastic_python_checkers = ['python']
+autocmd VimEnter * SyntasticToggleMode
 
 " NERDTree settings
 autocmd VimEnter * NERDTree
