@@ -28,3 +28,4 @@ git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle
 git clone --depth=1 https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone --depth=1 https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
 git clone --depth=1 https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+git clone --depth=1 https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
