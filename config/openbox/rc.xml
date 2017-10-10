@@ -310,7 +310,7 @@
   </keybind>
   <keybind key="C-A-i">
     <action name="Execute">
-      <command>/home/nuric/tools/togglebg.sh</command>
+      <command>~/tools/togglebg.sh</command>
     </action>
     <action name="Execute">
       <command>xcalib -i -a</command>
@@ -326,7 +326,9 @@
   
   <!-- Launch gnome-screenshot when Print is pressed -->
   <keybind key="Print">
-    <action name="Execute"><command>scrot -s -e 'mv $f ~/Pictures/'</command></action>
+    <action name="Execute">
+      <command>scrot -s -e 'xclip -selection clipboard -t image/png $f'</command>
+    </action>
   </keybind>
 
   <!-- Keybindings for sound -->
