@@ -3,8 +3,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-"Syntastic suggested settings
-
+" Syntastic suggested settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -25,10 +24,21 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeIgnore = ['__pycache__']
+let g:NERDTreeWinSize=21
 
 " NERD Commenter key bindings
 nmap <C-k> :call NERDComment('n', 'toggle')<CR>
 vmap <C-k> :call NERDComment('v', 'toggle')<CR>
+
+" Gitgutter settings
+set updatetime=500
+
+" Pydocstring key bindings
+nmap <silent> <C-J> <Plug>(pydocstring)
+
+" Jedivim settings
+let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#show_call_signatures = "2"
 
 "Custom settings
 set nu
@@ -50,8 +60,9 @@ ab abfor for(int i=0; i<n; ++i) {
 "f key mappings
 map <F3> :set spell spelllang=en_gb<CR>
 map <F4> :set nospell<CR>
-imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 map <F5> :!python3 %<CR>
-map <F8> :!make micaz sim && python runsim.py<CR>
 map <F9> :!pdflatex % && evince %<.pdf<CR>
 
+" Custom file types
+au BufRead,BufNewFile *.mq5 setfiletype cpp
+au BufRead,BufNewFile *.mqh setfiletype cpp
