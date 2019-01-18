@@ -128,13 +128,15 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-  <number>4</number>
+  <number>6</number>
   <firstdesk>1</firstdesk>
   <names>
     <name>alpha</name>
-    <name>beta</name>
-    <name>gamma</name>
+    <name>bravo</name>
+    <name>charlie</name>
     <name>delta</name>
+    <name>echo</name>
+    <name>foxtrot</name>
   </names>
   <popupTime>875</popupTime>
   <!-- The number of milliseconds to show the popup for when switching
@@ -284,7 +286,7 @@
   </keybind>
   <keybind key="C-A-b">
     <action name="Execute">
-      <command>firefox</command>
+      <command>google-chrome --disk-cache-dir=/dev/null</command>
     </action>
   </keybind>
   <keybind key="C-A-k">
@@ -318,7 +320,7 @@
   </keybind>
   <keybind key="C-A-Delete">
     <action name="Execute">
-      <command>rm -f /homes/nc1813/.inv</command>
+      <command>rm -f ~/.inv</command>
     </action>
     <action name="Exit">
     </action>
@@ -334,12 +336,12 @@
   <!-- Keybindings for sound -->
   <keybind key="C-Up">
     <action name="Execute">
-      <command>amixer -q -c 1 set Master 1+ unmute</command>
+      <command>amixer -q -c 0 set Master 1+ unmute</command>
     </action>
   </keybind>
   <keybind key="C-Down">
     <action name="Execute">
-      <command>amixer -q -c 1 set Master 1- unmute</command>
+      <command>amixer -q -c 0 set Master 1- unmute</command>
     </action>
   </keybind>
   
@@ -741,7 +743,7 @@
   <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
   <!-- system menu files on Debian systems -->
   <file>/var/lib/openbox/debian-menu.xml</file>
-  <file>/homes/nc1813/.config/openbox/menu.xml</file>
+  <file>~/.config/openbox/menu.xml</file>
   <hideDelay>200</hideDelay>
   <!-- if a press-release lasts longer than this setting (in milliseconds), the
        menu is hidden again -->

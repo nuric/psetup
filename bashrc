@@ -1,9 +1,7 @@
 # personal aliases
 alias ls="ls --color"
-alias ll="ls -al"
-alias inv="xcalib -i -a"
-alias rleft="xrandr --output HDMI1 --rotate left"
-alias rnormal="xrandr --output HDMI1 --rotate normal"
+alias rleft="xrandr -d :0 -o left"
+alias rnormal="xrandr -d :0 -o normal"
 alias tm="terminator -m"
 
 # custom environment variables
