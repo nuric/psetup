@@ -48,6 +48,7 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set softtabstop=2
+set hlsearch
 "set foldmethod=syntax
 
 "autocommands
@@ -56,11 +57,13 @@ autocmd BufNewFile,BufReadPost *.frag,*.vert set syntax=c
 
 "abbreviations
 ab abfor for(int i=0; i<n; ++i) {
+ab ipdb import ipdb; ipdb.set_trace()<CR>print("HERE")
 
 "f key mappings
 map <F3> :set spell spelllang=en_gb<CR>
 map <F4> :set nospell<CR>
 map <F5> :!python3 %<CR>
+map <F8> :!make micaz sim && python runsim.py<CR>
 map <F9> :!pdflatex % && evince %<.pdf<CR>
 
 " Custom file types
