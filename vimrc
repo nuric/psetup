@@ -40,6 +40,10 @@ nmap <silent> <C-J> <Plug>(pydocstring)
 let g:jedi#use_tabs_not_buffers = 1
 let g:jedi#show_call_signatures = "2"
 
+" Tagbar settings
+nmap <F8> :TagbarToggle<CR>
+let g:tagbar_sort = 0
+
 "Custom settings
 set nu
 set showcmd
@@ -63,7 +67,6 @@ ab ipdb import ipdb; ipdb.set_trace()<CR>print("HERE")
 map <F3> :set spell spelllang=en_gb<CR>
 map <F4> :set nospell<CR>
 map <F5> :!python3 %<CR>
-map <F8> :!make micaz sim && python runsim.py<CR>
 map <F9> :!pdflatex % && evince %<.pdf<CR>
 
 " Custom file types
