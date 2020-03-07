@@ -1,0 +1,13 @@
+# pip3 install --user --no-cache-dir --upgrade -r requirements.txt
+pip
+numpy
+pandas
+sklearn
+matplotlib
+seaborn
+h5py
+ipython
+ipdb
+jupyterlab
+pylint
+coverage
