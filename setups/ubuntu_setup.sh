@@ -1,3 +1,4 @@
+#!/bin/bash
 # Ubuntu based container image setup
 
 # Install packages

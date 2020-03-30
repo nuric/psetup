@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 COPY setups/ /setups/
-RUN /setups/ubuntu_setup.sh
+RUN chmod +x /setups/ubuntu_setup.sh && /setups/ubuntu_setup.sh
 
 VOLUME /home/nuric
 
