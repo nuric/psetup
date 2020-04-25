@@ -23,12 +23,25 @@ save() {
   scp -C ${TEMP} $1
   echo "Deleting temp file ${TEMP}"
   rm ${TEMP}
+  echo "Done."
 }
 
 # Sync MT4 expert changes back to repo
 load() {
   echo "Loading backup $1"
-  echo "TODO: Not implemented."
+  if [[ "$1" != *.tar.xz ]]; then
+    echo "Backup loads from .tar.xz files, please fix source."
+    exit 1
+  fi
+  # Load back up
+  echo "Transferring to backup.tar.xz"
+  scp -C $1 ~/backup.tar.xz
+  cd ~/
+  echo "Extracting archive."
+  tar -xvf ~/backup.tar.xz
+  echo "Deleting backup archive."
+  rm ~/backup.tar.xz
+  echo "Done."
 }
 
 # Check for arguments
