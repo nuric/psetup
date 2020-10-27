@@ -11,8 +11,12 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
+"Plug 'psf/black', { 'branch': 'stable' }
 
 call plug#end()
+
+" Black formatter
+"autocmd BufWritePre *.py execute ':Black'
 
 " Syntastic suggested settings
 set statusline+=%#warningmsg#
@@ -26,7 +30,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_loc_list_height = 4
 let g:syntastic_aggregate_errors = 1
 
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pylint', 'mypy']
 autocmd VimEnter * SyntasticToggleMode
 
 " NERDTree settings
@@ -60,12 +64,13 @@ let g:tagbar_sort = 0
 set nu
 set showcmd
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set autoindent
-set softtabstop=2
+set softtabstop=4
 set hlsearch
 "set foldmethod=syntax
+colorscheme koehler
 
 "autocommands
 autocmd BufNewFile,BufReadPost *.frag,*.vert set syntax=c
@@ -73,6 +78,7 @@ autocmd BufNewFile,BufReadPost *.frag,*.vert set syntax=c
 
 "abbreviations
 ab ipdb import ipdb; ipdb.set_trace()<CR>print("HERE")
+ab pdb import pdb; pdb.set_trace()<CR>print("HERE")
 
 "f key mappings
 map <F3> :set spell spelllang=en_gb<CR>
